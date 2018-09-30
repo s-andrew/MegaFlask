@@ -1,5 +1,6 @@
 {% extends 'bootstrap/base.html' %}
 
+
 {% block title %}
     {% if title %}
     {{ title }}
@@ -48,7 +49,6 @@
 {% endblock %}
 
 
-
 {% block content %}
     <div class="container">
         {% with messages = get_flashed_messages() %}
@@ -64,4 +64,10 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
 {% endblock %}
